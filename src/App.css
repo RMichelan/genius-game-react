@@ -1,0 +1,69 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Pixelify+Sans:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Gamja+Flower&family=Pixelify+Sans:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Gamja+Flower&family=Indie+Flower&family=Pixelify+Sans:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow:wght@100;200;300;400;500;600;700&family=Gamja+Flower&family=Indie+Flower&family=Pixelify+Sans:wght@400;600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+@keyframes animateStartButton {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+}
+
+.start-button {
+  width: auto;
+  height: auto;
+  border-radius: 40px;
+  padding: 0 30px;
+  background-color: #fc6736;
+  color: #ffffff;
+  border: none;
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  animation: animateStartButton 0.8s infinite alternate;
+  cursor: pointer;
+}
+
+.colors-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.colors-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-area {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-area p {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+}
