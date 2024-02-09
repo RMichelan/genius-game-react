@@ -7,6 +7,7 @@ export default function Game() {
   const [disableClick, setDisableClick] = useState(true);
   const [gameStarted, setGameStarted] = useState(false);
   const [textComments, setTextComments] = useState('...');
+  const [gameOver, setGameOver] = useState(false);
 
   // ** Functions
   // Inicia o jogo
@@ -21,18 +22,21 @@ export default function Game() {
     setTextComments('...');
     setPlayerSequence([]);
     setColorSequence([]);
+    setGameOver(false);
 
     addColorSequence();
   };
 
   // Finaliza o jogo
   const endGame = () => {
-    let score = playerSequence.length;
+    let colorLength = colorSequence.length;
+    let score = colorLength == 0 ? 0 : colorLength - 1;
 
     setTextComments(`Você errou a sequência! Sua Pontuação foi de ${score}.`);
     setDisableClick(true);
     setPlayerSequence([]);
     setColorSequence([]);
+    setGameOver(true);
   };
 
   // Adiciona a cor na sequência que o player deve seguir
@@ -122,6 +126,7 @@ export default function Game() {
     disableClick,
     gameStarted,
     textComments,
+    gameOver,
 
     // ** Functions
     startGame,

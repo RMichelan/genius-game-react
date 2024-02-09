@@ -8,13 +8,12 @@ import ButtonColor, {
 // ** Imports das regras do jogo
 import Game from './Game';
 
-const isDevice = window.innerWidth > 768;
-
 function App() {
   const {
     disableClick,
     gameStarted,
     textComments,
+    gameOver,
     startGame,
     restartGame,
     addPlayerSequence,
@@ -44,10 +43,8 @@ function App() {
                 color={COLORS.red}
                 className="button-color red"
                 value={1}
-                onTouchStart={(e) => turnOnButton(e)}
-                onTouchEnd={(e) => addPlayerSequence(e)}
-                {...(!isDevice && { onMouseDown: (e) => turnOnButton(e) })}
-                {...(!isDevice && { onMouseUp: (e) => addPlayerSequence(e) })}
+                onMouseDown={(e) => turnOnButton(e)}
+                onMouseUp={(e) => addPlayerSequence(e)}
               />
               <ButtonColor
                 id={2}
@@ -55,15 +52,20 @@ function App() {
                 color={COLORS.blue}
                 className="button-color blue"
                 value={2}
-                onTouchStart={(e) => turnOnButton(e)}
-                onTouchEnd={(e) => addPlayerSequence(e)}
-                {...(!isDevice && { onMouseDown: (e) => turnOnButton(e) })}
-                {...(!isDevice && { onMouseUp: (e) => addPlayerSequence(e) })}
+                onMouseDown={(e) => turnOnButton(e)}
+                onMouseUp={(e) => addPlayerSequence(e)}
               />
             </div>
-            <div className="center" onClick={restartGame}>
-              <span className="center-button">
-                <p>Reiniciar</p>
+            <div className="center">
+              <span
+                className="center-button"
+                onClick={restartGame}
+                style={{
+                  pointerEvents: !gameOver && "none",
+                  cursor: gameOver && "pointer"
+                }}
+              >
+                <p>{gameOver && "Reiniciar"}</p>
               </span>
             </div>
             <div className="button-area">
@@ -73,10 +75,8 @@ function App() {
                 color={COLORS.yellow}
                 className="button-color yellow"
                 value={3}
-                onTouchStart={(e) => turnOnButton(e)}
-                onTouchEnd={(e) => addPlayerSequence(e)}
-                {...(!isDevice && { onMouseDown: (e) => turnOnButton(e) })}
-                {...(!isDevice && { onMouseUp: (e) => addPlayerSequence(e) })}
+                onMouseDown={(e) => turnOnButton(e)}
+                onMouseUp={(e) => addPlayerSequence(e)}
               />
               <ButtonColor
                 id={4}
@@ -84,10 +84,8 @@ function App() {
                 color={COLORS.green}
                 className="button-color green"
                 value={4}
-                onTouchStart={(e) => turnOnButton(e)}
-                onTouchEnd={(e) => addPlayerSequence(e)}
-                {...(!isDevice && { onMouseDown: (e) => turnOnButton(e) })}
-                {...(!isDevice && { onMouseUp: (e) => addPlayerSequence(e) })}
+                onMouseDown={(e) => turnOnButton(e)}
+                onMouseUp={(e) => addPlayerSequence(e)}
               />
             </div>
           </div>

@@ -8,4 +8,4 @@ export const turnOnButton = (event) => {
 
 export default function ButtonColor(props) {
   return <button {...props} />;
-}
+};

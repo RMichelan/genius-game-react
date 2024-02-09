@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/genius-game-react/static/css/main.22dce65f.css",
+    "main.js": "/genius-game-react/static/js/main.4369c069.js",
+    "index.html": "/genius-game-react/index.html",
+    "main.22dce65f.css.map": "/genius-game-react/static/css/main.22dce65f.css.map",
+    "main.4369c069.js.map": "/genius-game-react/static/js/main.4369c069.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22dce65f.css",
+    "static/js/main.4369c069.js"
+  ]
+}
